@@ -1,11 +1,11 @@
-package cz.upce.cvic_02.models;
+package cz.upce.cvic.entities;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class User {
+public class HelloUser {
   private String forename;
   private String surname;
   private int age;

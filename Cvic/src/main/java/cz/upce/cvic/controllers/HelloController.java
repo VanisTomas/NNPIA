@@ -1,4 +1,4 @@
-package cz.upce.cvic_02.controllers;
+package cz.upce.cvic.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import cz.upce.cvic_02.models.User;
+
+import cz.upce.cvic.entities.HelloUser;
 
 // @Controller definuje, ze se jedna o Spring Controller, ktery slouzi ke zpracovavani pozadavku
 // @RestController je kompinaci @Controller a @ResponseBody, ktera nam rika, ze odpoved metody bude automaticky odeslana jako HTTP Response v JSON formatu
@@ -33,7 +34,7 @@ public class HelloController {
   }
 
   @PostMapping("/hello")
-  public String helloWorldRequestBody(@RequestBody User user) {
+  public String helloWorldRequestBody(@RequestBody HelloUser user) {
     return "Hello " + user.getForename() + " " + user.getSurname() + " you are " + user.getAge() + " years old.";
   }
 }

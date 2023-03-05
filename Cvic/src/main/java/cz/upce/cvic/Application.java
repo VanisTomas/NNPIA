@@ -1,4 +1,4 @@
-package cz.upce.cvic_02;
+package cz.upce.cvic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
