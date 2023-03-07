@@ -1,32 +1,32 @@
 changeSet:
-  id: 1
+  id: create-tables
   author: Tomas
   changes:
-    insert:
-      catalogName: nnpia
-       column:
+  - createTable:
+      dbms: 'postgresql'
+      schemaName: public
+      tableName: app_user
+      - column:
           name: id
           type: int
           autoIncrement: true
           constraints:
             primaryKey: true
             nullable: false
-       column:
+      - column:
           name: username
           type: varchar(255)
-       column:
+      - column:
           name: password
           type: varchar(255)
-       column:
+      - column:
           name: active
           type: bool
-       column:
+      - column:
           name: creation_date
           type: date
-       column:
+      - column:
           name: update_date
           type: date
-      dbms: '!h2, postgresql'
-      schemaName: public
-      tableName: app_user
+      
       

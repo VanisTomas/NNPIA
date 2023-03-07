@@ -1,7 +1,6 @@
 package cz.upce.cvic.entities;
 
-import java.sql.Date;
-
+import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,10 +20,10 @@ public class Task {
   private int id;
   private String title;
   private String description;
-  private Date creation_date;
-  private Date update_date;
-  private int authod_id;
+  private LocalDateTime creationDate;
+  private LocalDateTime updateDate;
+  private int authodId;
   @ManyToOne
   @JoinColumn(name = "authod_id", insertable = false, updatable = false)
-  private AppUser app_user;
+  private AppUser appUser;
 }
