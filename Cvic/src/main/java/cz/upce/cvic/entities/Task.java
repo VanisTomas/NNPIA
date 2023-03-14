@@ -22,8 +22,8 @@ public class Task {
   private String description;
   private LocalDateTime creationDate;
   private LocalDateTime updateDate;
-  private int authodId;
+  private int authorId;
   @ManyToOne
-  @JoinColumn(name = "authod_id", insertable = false, updatable = false)
+  @JoinColumn(name = "authorId", insertable = false, updatable = false)
   private AppUser appUser;
 }

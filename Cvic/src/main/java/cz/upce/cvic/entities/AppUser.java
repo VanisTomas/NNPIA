@@ -32,10 +32,10 @@ public class AppUser {
   private LocalDateTime creationDate;
   private LocalDateTime updateDate;
   @OneToMany
-  @JoinColumn(name = "author_id")
+  @JoinColumn(name = "authorId")
   private Set<Task> tasks;
   @ManyToMany
-  @JoinTable(name = "app_user_role", joinColumns = @JoinColumn(name = "app_user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+  @JoinTable(name = "appUserRole", joinColumns = @JoinColumn(name = "appUserId"), inverseJoinColumns = @JoinColumn(name = "roleId"))
   private Set<Role> roles;
 
   public AppUser(String username, String password, Boolean active, LocalDateTime creationDate, LocalDateTime updateDate) {
@@ -45,5 +45,4 @@ public class AppUser {
     this.creationDate = creationDate;
     this.updateDate = updateDate;
   }
-
 }
